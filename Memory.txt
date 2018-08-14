@@ -1,0 +1,56 @@
+package hardware;
+
+public class Memory extends Hardware {
+
+	private int capacity;
+	private String transmissionType;
+	
+	
+	
+	
+	public Memory() {
+	}
+
+
+	public Memory(String brand, String model, String countryName, int length, int width, int capacity,
+			String transmissionType) {
+		super(brand, model, countryName, length, width);
+		this.capacity = capacity;
+		this.transmissionType = transmissionType;
+	}
+
+	
+	
+	public Memory(String brand, String model, String countryName, int length, int width, int capacity) {
+		super(brand, model, countryName, length, width);
+		this.capacity = capacity;
+	}
+
+
+	public void setCapacity(int capacity) {
+		this.capacity = capacity;
+	}
+
+	public void setTransmissionType(String transmissionType) {
+		this.transmissionType = transmissionType;
+	}
+
+	public int getCapacity() {
+		return capacity;
+	}
+
+	public String getTransmissionType() {
+		return transmissionType;
+	}
+
+	@Override
+	public String toString() {
+		String str = this.getCapacity() + "  " + this.getTransmissionType();
+		return super.toString() + "  " + str;
+	}
+
+	
+	
+	
+	
+}

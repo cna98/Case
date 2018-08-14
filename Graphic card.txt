@@ -1,0 +1,37 @@
+package hardware;
+
+public class Graphic extends Memory {
+	
+	private String memoryType;
+
+	
+	
+	public Graphic() {
+		
+	}
+
+	
+	public Graphic(String brand, String model, String countryName, int length, int width, int capacity,
+			String memoryType) {
+		super(brand, model, countryName, length, width, capacity);
+		this.memoryType = memoryType;
+	}
+
+
+	public void setMemoryType(String memoryType) {
+		this.memoryType = memoryType;
+	}
+
+	public String getMemoryType() {
+		return memoryType;
+	}
+
+	@Override
+	public String toString() {
+		String str =  this.getMemoryType();
+		return super.toString() + "  " + str;
+	}
+	
+	
+
+}

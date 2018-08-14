@@ -1,0 +1,27 @@
+package hardware;
+
+public class PowerSupply extends Hardware{
+
+	private int capacity;
+
+	public PowerSupply(String brand, String model, String countryName, int length, int width, int capacity) {
+		super(brand, model, countryName, length, width);
+		this.capacity = capacity;
+	}
+
+	public int getCapacity() {
+		return capacity;
+	}
+
+	public void setCapacity(int capacity) {
+		this.capacity = capacity;
+	}
+
+	@Override
+	public String toString() {
+		
+		return super.toString() + "  " + getCapacity();
+	}
+	
+	
+}

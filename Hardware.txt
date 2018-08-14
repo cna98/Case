@@ -1,0 +1,90 @@
+package hardware;
+
+
+public  abstract class Hardware {
+	
+	private String brand , model , countryName;
+	private int length , width;
+	
+	public Hardware(String brand, String model, String countryName, int length, int width) {
+		
+		this.brand = brand;
+		this.model = model;
+		this.countryName = countryName;
+		this.length = length;
+		this.width = width;
+	}
+
+	public Hardware() {
+		
+	}
+
+
+	public Hardware(String brand, int length, int width) {
+		this.brand = brand;
+		this.length = length;
+		this.width = width;
+	}
+
+	
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+
+	public void setLength(int length) {
+		this.length = length;
+	}
+	
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+
+	public String getBrand() {
+		return brand;
+	}
+
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+
+	public String getModel() {
+		return model;
+	}
+
+
+	public int getLength() {
+		return length;
+	}
+
+
+	public int getWidth() {
+		return width;
+	}
+
+
+	public String getCountryName() {
+		return countryName;
+	}
+
+
+
+	public void setCountryName(String countryName) {
+		this.countryName = countryName;
+	}
+
+
+
+
+	@Override
+	public String toString() {
+		String str = this.getBrand() +"  " + this.getModel() + "  " + this.countryName + "  " +this.getLength() + "  " + this.getWidth();
+		return str;
+	}
+
+
+	
+}

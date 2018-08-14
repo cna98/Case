@@ -1,0 +1,109 @@
+package hardware;
+
+public class Case extends Hardware {
+
+	private int height;
+	private String color;
+	
+	private Memory[] numberOfMemories;
+	private PowerSupply power;
+	private Graphic graphicCard;
+	private Cpu cpu;
+	private Hdd hardDisk;
+	private Motherboard motherboard;
+	
+
+	public Case(String brand, String model, String countryName, int length, int width, int height, String color) {
+		super(brand, model, countryName, length, width);
+		this.height = height;
+		this.color = color;
+	}
+
+	public Case() {
+		
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	
+	
+	
+	
+	public Memory[] getNumberOfMemories() {
+		return numberOfMemories;
+	}
+
+	public void setNumberOfMemories(Memory[] numberOfMemories) {
+		this.numberOfMemories = numberOfMemories;
+	}
+
+	public PowerSupply getPower() {
+		return power;
+	}
+
+	public void setPower(PowerSupply power) {
+		this.power = power;
+	}
+
+	public Graphic getGraphicCard() {
+		return graphicCard;
+	}
+
+	public void setGraphicCard(Graphic graphicCard) {
+		this.graphicCard = graphicCard;
+	}
+
+	public Cpu getCpu() {
+		return cpu;
+	}
+
+	public void setCpu(Cpu cpu) {
+		this.cpu = cpu;
+	}
+
+	public Hdd getHardDisk() {
+		return hardDisk;
+	}
+
+	public void setHardDisk(Hdd hardDisk) {
+		this.hardDisk = hardDisk;
+	}
+
+	public Motherboard getMotherboard() {
+		return motherboard;
+	}
+
+	public void setMotherboard(Motherboard motherboard) {
+		this.motherboard = motherboard;
+	}
+
+	@Override
+	public String toString() {
+		String str = this.getHeight() +"  " + this.getColor() + " " +  "\n" + motherboard.toString() + "\n" + cpu.toString() + 
+				"\n" ;
+		for(int i = 0 ; i< numberOfMemories.length ; i++)
+		{
+			str += getNumberOfMemories()[i] + "\n";
+			
+		} 
+		str += "\n" + hardDisk.toString() + "\n"+ power.toString() ;
+		return super.toString() + " " + str;
+	}
+	
+	
+	
+}

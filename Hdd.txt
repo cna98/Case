@@ -1,0 +1,33 @@
+package hardware;
+
+public class Hdd extends Memory {
+	
+	private String type;
+
+	
+	public Hdd(String brand, String model, String countryName, int length, int width, int capacity, String type) {
+		super(brand, model, countryName, length, width, capacity);
+		this.type = type;
+	}
+
+	public Hdd() {
+		
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	@Override
+	public String toString() {
+		
+		return super.toString() + " " + this.getType();
+	}
+	
+	
+	
+}

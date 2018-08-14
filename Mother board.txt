@@ -1,0 +1,60 @@
+package hardware;
+
+public class Motherboard extends Hardware {
+	
+	private String cpuSocketType , memoryType;
+	private int numberOfUsb3;
+	
+	
+	public Motherboard() {
+		
+	}
+
+	
+
+	public Motherboard(String brand, String model, String countryName, int length, int width, String cpuSocketType,
+			String memoryType, int numberOfUsb3) {
+		super(brand, model, countryName, length, width);
+		this.cpuSocketType = cpuSocketType;
+		this.memoryType = memoryType;
+		this.numberOfUsb3 = numberOfUsb3;
+	}
+
+
+
+	public void setCpuSocketType(String cpuSocketType) {
+		this.cpuSocketType = cpuSocketType;
+	}
+
+	public void setMemoryType(String memoryType) {
+		this.memoryType = memoryType;
+	}
+
+	public void setNumberOfUsb3(int numberOfUsb3) {
+		this.numberOfUsb3 = numberOfUsb3;
+	}
+
+	public String getCpuSocketType() {
+		return cpuSocketType;
+	}
+
+	public String getMemoryType() {
+		return memoryType;
+	}
+
+	public int getNumberOfUsb3() {
+		return numberOfUsb3;
+	}
+
+	@Override
+	public String toString() {
+		String str = this.getCpuSocketType() + " " + this.getNumberOfUsb3() + " " + this.getMemoryType();
+		return super.toString() + " " + str;
+	}
+	
+	
+	
+
+}
+
+

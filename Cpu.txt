@@ -1,0 +1,48 @@
+package hardware;
+
+public class Cpu extends Hardware {
+	
+	 private int  numberOfCores;
+	
+	private double frequency;
+
+	public Cpu() {
+	
+	}
+
+
+	public Cpu(String brand, String model, String countryName, int length, int width, int numberOfCores,
+			double frequency) {
+		super(brand, model, countryName, length, width);
+		this.numberOfCores = numberOfCores;
+		this.frequency = frequency;
+	}
+
+
+
+
+
+	public double getFrequency() {
+		return frequency;
+	}
+
+	public void setFrequency(double frequency) {
+		this.frequency = frequency;
+	}
+
+	public int getNumberOfCores() {
+		return numberOfCores;
+	}
+
+	public void setNumberOfCores(int numberOfCores) {
+		this.numberOfCores = numberOfCores;
+	}
+
+	@Override
+	public String toString() {
+		String str = this.getFrequency() + " " + this.getNumberOfCores();
+		return super.toString()+ "  "+ str;
+	}
+	
+
+}

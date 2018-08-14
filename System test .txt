@@ -1,0 +1,29 @@
+package hardware;
+
+public class SystemTest {
+
+	public static void main(String[]args)
+	{
+	Case mySystem = new Case("Green", "54lk", "United Kingdom",60, 25 , 40, "Black");
+	
+	Motherboard motherboard = new Motherboard("Asus", "df454", "Taiwan", 30, 30, "Intel", "DDR4", 5);
+	Cpu cpu = new Cpu("Intel", "core i7 7700 HQ", "USA", 4, 4, 4, 3.8);
+	Graphic graphic = new Graphic("Nvidia", "geforce 1050" , "USA", 14, 10, 4, "GDDR5");
+	Hdd hdd = new Hdd("Western" , "" , "USA", 18, 11, 1000, "SSD");
+	PowerSupply power =  new PowerSupply("Green", "4541", "United Kingdom", 20, 20, 400);
+	Memory[] memories = new Memory[2];
+	
+	memories[0] = new Memory("ADATA", "5414", "China", 10, 3, 4);
+	memories[1] = new Memory("ADATA", "5414", "China", 10, 3, 4);
+	
+	mySystem.setMotherboard(motherboard);
+	mySystem.setCpu(cpu);
+	mySystem.setNumberOfMemories(memories);
+	mySystem.setGraphicCard(graphic);
+	mySystem.setHardDisk(hdd);
+	mySystem.setPower(power);
+	
+	
+	System.out.println(mySystem);
+	}
+}
